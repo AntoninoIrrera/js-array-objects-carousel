@@ -136,7 +136,9 @@ const caroselloWrapper = document.querySelector("div.carousel-wrapper");
 const contenitoreThumb = document.querySelector("div.thumbnails-wrapper");
 let divThum;
 
-images.forEach(image => {
+
+
+images.forEach((image, index) => {
 
    caroselloWrapper.append(contenitoreThumb);
 
@@ -150,14 +152,19 @@ images.forEach(image => {
    divThum.style.backgroundSize = "cover";
    divThum.style.backgroundPosition = "center";
 
-
+   
    divThum.addEventListener("click", function(){
       
-
+         
+      arrayDiv[contatore].classList.remove("active");
+     
       
+      contatore = index;
 
+      arrayDiv[index].classList.add("active");
 
    });
 
 });
+
 
