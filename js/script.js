@@ -57,14 +57,14 @@ const clickSu = document.getElementById("clickSu");
 let div;
 let img;
 let contatore = 0;
-// let contatoreGiu = 0;
 const arrayDiv = [];
+let br;
 
 images.forEach(image => {
    
    div = document.createElement("div");
    img = document.createElement("img");
-
+   br = document.createElement("br");
    
    div.classList.add("my_carousel-item");
    
@@ -73,8 +73,15 @@ images.forEach(image => {
    contenitoreImg.append(div);
 
    img.src = `./${image.image}`;
+   img.alt = `${image.title}`;
 
    div.append(img);
+   div.append(image.title);
+   div.append(br);
+   div.append(image.text);
+
+
+
 
 
 
@@ -113,7 +120,7 @@ clickSu.addEventListener("click", function () {
 
       contatore--;
    }
-   
+
 
    
 
