@@ -168,3 +168,16 @@ images.forEach((image, index) => {
 });
 
 
+const imgAutomatica = setInterval(function (){
+
+   arrayDiv[contatore].classList.remove("active");
+   
+   contatore++;
+
+   if(contatore == 5){
+      contatore = 0;
+   }
+
+   arrayDiv[contatore].classList.add("active");
+
+} , 3*1000);
