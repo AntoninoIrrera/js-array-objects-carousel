@@ -57,7 +57,7 @@ const clickSu = document.getElementById("clickSu");
 let div;
 let img;
 let contatore = 0;
-let contatoreGiu = 0;
+// let contatoreGiu = 0;
 const arrayDiv = [];
 
 images.forEach(image => {
@@ -105,19 +105,19 @@ clickGiu.addEventListener("click", function(){
 clickSu.addEventListener("click", function () {
 
 
-   arrayDiv[contatoreGiu].classList.remove("active");
+   arrayDiv[contatore].classList.remove("active");
    
-   if(contatoreGiu == 0){
-      contatoreGiu = 4;
+   if(contatore == 0){
+      contatore = 4;
    }else{
 
-      contatoreGiu--;
+      contatore--;
    }
-
+   
 
    
 
-   arrayDiv[contatoreGiu].classList.add("active");
+   arrayDiv[contatore].classList.add("active");
 
 
 
