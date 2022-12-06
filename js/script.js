@@ -87,7 +87,6 @@ images.forEach(image => {
 
 });
 
-
 arrayDiv[0].classList.add("active");
 
 
@@ -129,3 +128,36 @@ clickSu.addEventListener("click", function () {
 
 
 });
+
+
+
+
+const caroselloWrapper = document.querySelector("div.carousel-wrapper");
+const contenitoreThumb = document.querySelector("div.thumbnails-wrapper");
+let divThum;
+
+images.forEach(image => {
+
+   caroselloWrapper.append(contenitoreThumb);
+
+   divThum = document.createElement("div");
+
+   divThum.classList.add("carousel-thumbnails");
+
+   contenitoreThumb.append(divThum);
+
+   divThum.style.backgroundImage = `url(./${image.image})`;
+   divThum.style.backgroundSize = "cover";
+   divThum.style.backgroundPosition = "center";
+
+
+   divThum.addEventListener("click", function(){
+      
+
+      
+
+
+   });
+
+});
+
